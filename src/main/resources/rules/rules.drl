@@ -1,0 +1,13 @@
+package rules;
+
+import com.local.drool.droolticket.domain.Patient
+import com.local.drool.droolticket.util.Utility
+import com.local.drool.droolticket.util.Utility
+
+rule "Check for bangalore patient"
+    when
+        patientObject : Patient(areaId=="1")
+        then
+        patientObject.setIsAssignable(true);
+        Utility.showSomeMessage("drool file");
+    end
